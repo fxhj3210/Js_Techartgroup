@@ -35,7 +35,7 @@ var data = {
     //{ico:按钮图标 bg:背景颜色 tint:图标颜色}
     //logo:主按钮
     logo: {
-        ico: "http://aiqinet.oss-cn-shanghai.aliyuncs.com/ks%E5%BC%80%E5%BF%83/ico.png",
+        ico: "https://www.kanxue.com/view/img/favicon.ico",
         bg: "#77ffffff",
         tint: "#00000000"
     },
@@ -46,7 +46,9 @@ var data = {
     //menu:日志按钮
     menu: { ico: "@drawable/ic_assignment_black_48dp", bg: "#009687", tint: "#ffffff" },
     //close:关闭按钮
-    close: { ico: "@drawable/ic_clear_black_48dp", bg: "#fbd834", tint: "#ffffff" }
+    close: { ico: "@drawable/ic_clear_black_48dp", bg: "#fbd834", tint: "#ffffff" },
+    //第一个程序
+    exe1: { ico: "@drawable/ic_play_arrow_black_48dp", bg: "#40a5f3", tint: "#ffffff" }
 }
 //系统初始化参数
 //动画播放状态
@@ -155,6 +157,7 @@ var w_menu = floaty.rawWindow(
         <butLogo-layout src="{{data.close.ico}}" bg="{{data.close.bg}}" tint="{{data.close.tint}}" onClick="close" layout_gravity="center" />
         <butLogo-layout src="{{data.menu.ico}}" bg="{{data.menu.bg}}" tint="{{data.menu.tint}}" onClick="menu" layout_gravity="center" />
         <butLogo-layout src="{{data.open.ico}}" bg="{{data.open.bg}}" tint="{{data.open.tint}}" onClick="open" layout_gravity="center" />
+        <butLogo-layout src="{{data.exe1.ico}}" bg="{{data.exe1.bg}}" tint="{{data.exe1.tint}}" onClick="exe1" layout_gravity="center" />
     </frame>
 )
 //构建logo悬浮窗
@@ -419,7 +422,7 @@ function comm(msg) {
             app.startActivity("console")
             break;
         case "close":
-            强制退出脚本()
+            //强制退出脚本()
             engines.stopAll()
             exit()
             break;
@@ -446,7 +449,7 @@ function 启动脚本() {
 
 function 停止脚本() {
     execution.getEngine().forceStop();
-    //device.vibrate(1000)
+    device.vibrate(1000)
 
 }
 

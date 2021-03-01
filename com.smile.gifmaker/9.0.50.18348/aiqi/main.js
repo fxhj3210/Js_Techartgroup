@@ -1,5 +1,5 @@
 var userID
-console.show();
+
 log('版本1.0.3')
 
 
